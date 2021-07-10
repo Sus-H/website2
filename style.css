@@ -1,85 +1,137 @@
 body {
-    font-family: Roboto Mono; /* funkar ej :( Det funkade, hade glömt stylesheet */
-    padding: 0;
-    margin: 0;
+  font-family: Roboto Mono; /* funkar ej :( Det funkade, hade glömt stylesheet */
+  padding: 0;
+  margin: 0;
+  background-color: lightgrey;
+  /**/
 }
 
 .header {
-    display: flex;
-    padding:  20px 20px;
-    background-color: pink;
-    color: white;
-    justify-content: space-between;
-    align-items: center; /* vertical alignment, makes them align to center */
-    flex-wrap: wrap;
-    /* flex-direction: column; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* create 3 columns with equals size*/
+
+  padding: 20px 20px;
+  background-color: palevioletred;
+  color: white;
+  align-items: center; /* vertical alignment, makes them align to center */
+
+  /* flex-direction: column; */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  height: 75px;
 }
 
 .art-showcase {
-    background-color: white;
+  background-color: white;
 }
 
 .hero {
-    background-color: white;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  background-color: palevioletred;
+}
+
+.hero-img {
+  height: 200px;
+}
+
+main {
+  height: 400vh;
+  margin: 0 400px;
+  padding: 20px;
+  background-color: White;
 }
 
 img {
-
-    display: flex;
-    /* max-width: 50%; */
-    /* margin: 20px; */
-    
-    
-    
+  display: flex;
+  /* max-width: 50%; */
+  /* margin: 20px; */
 }
 
 .img-link-inner {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-   
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .img-header {
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  background-color: palevioletred;
+}
+
+.header-img {
+  height: 200px;
 }
 
 .nav {
-    display: flex; /* makes the list align horisontally */
-    color: papayawhip; /* colors the bullets of list */
-    list-style: none; /* removes bullets */
-    font-weight: bold;
-    
+  display: flex; /* makes the list align horisontally */
+  color: papayawhip; /* colors the bullets of list */
+  list-style: none; /* removes bullets */
+  font-weight: bold;
 }
 
 .nav a {
-    color:snow;
-    text-decoration: none; /* Underline from link */
-    display: block; /* why did we use this ?? */
-    transition: all 0.3s ease-out;
+  color: snow;
+  text-decoration: none; /* Underline from link */
+  display: block; /* why did we use this ?? */
+  transition: all 0.3s ease-out;
+  padding: 10px;
+  background: #e4509f;
 
+  text-transform: capitalize; /* Makes all words begin with a capital letter*/
 }
 
 .nav a:hover {
-    color:navajowhite;
-    transform: scale(120%);
-    
-  }
+  color: navajowhite;
+  background-color: lightpink;
+  transform: scale(120%);
+}
 
 .nav li {
-    margin-left: 20px;
-    margin-right: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.logo-container {
+  margin-left: 20px;
+}
+.logo-img {
+  width: 50px;
+  height: 50px;
 }
 
 .footer {
-    background-color: pink;
-    padding: 20px 0;
-    text-align: center; /* not using align-items because we only have text here. Only works on text. */
-    font-size: .9rem;
+  background-color: pink;
+  padding: 20px 0;
+  text-align: center; /* not using align-items because we only have text here. Only works on text. */
+  font-size: 0.9rem;
+  /**/
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Containers! */
+
+.container-left {
+  padding: 10px;
+}
+.container-center {
+}
+.container-right {
 }
